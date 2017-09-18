@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>文章列表</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {taglib name="common\taglib\Article,common\taglib\Script" /}
+        {script:javascript src="http://www.baidu,com/js.js" / }
+    </head>
+    <body>
+        <ul>
+            {article:lists limit="10" item="data" key="k" }
+            文章id ：{$data.id}，文章标题：{$data.title}，<br />文章描述: {$data.description}
+            <hr />
+            {/article:lists}
+        </ul>
+    </body>
+</html>
